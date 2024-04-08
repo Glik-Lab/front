@@ -2,7 +2,9 @@
   "name": "glick",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://127.0.0.1:5000",
+ "engines": {
+  "node":"18"
+ },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -10,8 +12,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@ckeditor/ckeditor5-build-classic": "^41.2.1",
-    "@ckeditor/ckeditor5-react": "^6.2.0",
+    
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
     "@ethersproject/providers": "^5.7.2",
@@ -25,7 +26,7 @@
     "@react-email/button": "^0.0.10",
     "@react-email/components": "^0.0.7",
     "@react-email/html": "^0.0.4",
-    "@react-pdf/renderer": "^3.1.12",
+
     "@solana/web3.js": "^1.90.0",
     "@solflare-wallet/sdk": "^1.4.2",
     "@stripe/react-stripe-js": "^2.6.2",
