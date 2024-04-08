@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import { v4 as uuidv4 } from 'uuid';
 import ImageGlick from '../assets/logo-glick/Glik 2.svg';
 import NavbarLogado from '../components/NavBarLogado';
-import RPC from "../components/solanaRPC";
+import Rpc from "../components/SolanaRPC";
 import styles from '../styles/Card.module.css';
 // Adapters
 import { getDefaultExternalAdapters } from "@web3auth/default-solana-adapter"; // All default Solana Adapters
@@ -179,7 +179,7 @@ export default function Signin() {
       uiConsole("provider not initialized yet");
       return;
     }
-    const rpc = new RPC(provider);
+    const rpc = new Rpc(provider);
     const address = await rpc.getAccounts();
     uiConsole(address);
     //@ts-ignore
