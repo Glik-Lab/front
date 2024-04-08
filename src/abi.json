@@ -1,0 +1,89 @@
+[
+    { "inputs": [], "stateMutability": "nonpayable", "type": "constructor" },
+    {
+      "inputs": [
+        {
+          "components": [
+            { "internalType": "string", "name": "name", "type": "string" },
+            { "internalType": "string", "name": "hashDocumento", "type": "string" },
+            { "internalType": "string", "name": "status", "type": "string" },
+            { "internalType": "string", "name": "data", "type": "string" }
+
+          ],
+          "internalType": "struct StoreContract.Contract",
+          "name": "contract",
+          "type": "tuple"
+        }
+      ],
+      "name": "signContract",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "count",
+      "outputs": [{ "internalType": "uint32", "name": "", "type": "uint32" }],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [{ "internalType": "uint32", "name": "", "type": "uint32" }],
+      "name": "contracts",
+      "outputs": [
+        { "internalType": "string", "name": "name", "type": "string" },
+        { "internalType": "string", "name": "hashDocumento", "type": "string" },
+        { "internalType": "string", "name": "status", "type": "string" },
+        { "internalType": "string", "name": "data", "type": "string" }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        { "internalType": "uint32", "name": "id", "type": "uint32" },
+        {
+          "components": [
+            { "internalType": "string", "name": "name", "type": "string" },
+            { "internalType": "string", "name": "hashDocumento", "type": "string" },
+            { "internalType": "string", "name": "status", "type": "string" },
+            { "internalType": "string", "name": "data", "type": "string" }
+          ],
+          "internalType": "struct StoreContract.Contract",
+          "name": "newContract",
+          "type": "tuple"
+        }
+      ],
+      "name": "editContract",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [{ "internalType": "uint32", "name": "id", "type": "uint32" }],
+      "name": "getContract",
+      "outputs": [
+        {
+          "components": [
+            { "internalType": "string", "name": "name", "type": "string" },
+            { "internalType": "string", "name": "hashDocumento", "type": "string" },
+            { "internalType": "string", "name": "status", "type": "string" },
+            { "internalType": "string", "name": "data", "type": "string" }
+          ],
+          "internalType": "struct StoreContract.Contract",
+          "name": "",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [{ "internalType": "uint32", "name": "id", "type": "uint32" }],
+      "name": "removeContract",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ]
+  

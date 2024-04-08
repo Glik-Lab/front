@@ -1,0 +1,292 @@
+.div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 100%;
+  align-items: center;
+  justify-content: left;
+ 
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  border: 1px solid #e5e5e5;
+  border-radius: 4px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
+  padding: 16px;
+  margin-bottom: 16px;
+  width: 300px;
+  height: 500px;
+  justify-content: space-between;
+}
+
+.cardTitle {
+  font-size: 20px;
+  font-style: bold;
+  font-weight: 700;
+  line-height: 21px;
+}
+
+/* .cardText {
+  font-size: 14px;
+  margin-bottom: 20px;
+  line-height: 1.5;
+  height: 72px;
+  overflow: hidden;
+} */
+
+.underline {
+  font-weight: bold;
+  margin-left: 5px;
+  text-decoration: underline;
+}
+
+.signers_container {
+  display: flex;
+  align-items: center;
+}
+
+.status {
+  margin: 12px 0;
+}
+.avatar {
+  margin-left: 5px;
+}
+
+.statusAguardando {
+  width: 60%;
+  background-color: #fffbea;
+  color: #ecc95d;
+  border-radius: 5px;
+  display: flex;
+  padding: 4px 8px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.statusCriado {
+  width: 50%;
+  background-color: #d2e7ff;
+  color: #147bd1;
+  border-radius: 5px;
+  display: flex;
+  padding: 4px 8px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.statusFinalizado {
+  width: 50%;
+  background-color: #effbdc;
+  color: #477d3f;
+  border-radius: 5px;
+  display: flex;
+  padding: 4px 8px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.statusCancelado {
+  width: 50%;
+  background-color: #fbd9da;
+  color: #b3261e;
+  border-radius: 5px;
+  display: flex;
+  padding: 4px 8px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.spanData {
+  margin-top: 15%;
+  color: #34363a;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+.button {
+  cursor: pointer;
+ 
+}
+
+.buttonContinue {
+  cursor: pointer;
+  border:solid 1px #061523;
+  background-color: #34363A;
+  color: white;
+  border-radius: 4px;
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 40px;
+  margin-bottom: 10px;
+  
+}
+
+.bold {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* .buttons {
+  display: flex;
+  align-items: center;
+} */
+
+.username {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.myContracts {
+  font-size: 18px;
+  margin-top: 32px;
+  margin-bottom: 16px;
+}
+
+.search {
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.search input {
+  margin-right: 16px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+}
+
+.search select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+}
+
+.new {
+  border: solid 1px black;
+  background-color: #55c57a;
+  border-radius: 4px;
+  transform: translatey(-300px);
+}
+
+.pdf {
+   border: solid 1px black; 
+  /* border-radius: 10px; */
+  /* box-shadow: 10px 5px 5px  rgb(75, 72, 72); */
+  
+}
+.buttonContinue1 {
+  cursor: pointer;
+  border:solid 1px #061523;
+  background-color: #34363A;
+  color: white;
+  border-radius: 4px;
+  width: 40%;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  
+}
+
+.buttonContinue2 {
+  cursor: pointer;
+  border:solid 1px #061523;
+  background-color: #34363A;
+  color: white;
+  border-radius: 4px;
+  
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  
+}
+.divPdf{
+  margin: 10px;
+  width: 97%;
+  display: flex;
+ flex-direction: column;
+ flex-shrink: 1;
+
+}
+.divBordaCinza{
+  display: flex;
+  flex-direction: column;
+  background-color: #D1D1D1;
+  align-items: center;
+}
+.divBranca{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ 
+}
+ .divBotao{
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  width: 98%;
+  gap: 60px;
+  margin-top: 10px;
+ 
+ }
+
+
+@media(max-width: 620px){
+  .divPdf{
+    display: flex;
+    flex-direction: column;
+    width: auto;
+  }
+  .divBranca{
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    transform: scale(0.8, 1);
+  }
+}
+
+@media(max-width: 605px){
+  .divPdf{
+    display: flex;
+    flex-direction: column;
+    width: auto;
+  }
+  .divBranca{
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    transform: scale(0.7, 1);
+  }
+}
+
+@media(max-width: 440px){
+  .divPdf{
+    display: flex;
+    flex-direction: column;
+    width: auto;
+  }
+  .divBranca{
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    transform: scale(60%, 100%);
+  }
+}

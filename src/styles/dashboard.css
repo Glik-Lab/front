@@ -1,0 +1,214 @@
+.documents-container {
+    background-color: #F2F2F3;
+    
+}
+
+.documents-container .my-documents-container .homepage-path {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 24px;
+   
+}
+
+.documents-container .my-documents-container .homepage-path .icon {
+    padding: 0 10px;
+}
+
+.documents-container .my-documents-container .homepage-path a {
+    text-decoration: none;
+    color: #34363A;
+    font-size: 14px;
+}
+
+.documents-container .my-documents-container .homepage-path a:hover {
+    text-decoration: underline;
+}
+
+.documents-container .my-documents-container .homepage-path p {
+    font-weight: bold;
+    font-size: 14px;
+    text-decoration: underline;
+    margin-bottom: 0;
+}
+
+.documents-container .my-documents-container .create-new-document {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    padding: 16px;
+    margin: 0 24px;
+    border-radius: 4px;
+   
+}
+
+.documents-container .my-documents-container .create-new-document h1 {
+    margin-bottom: 0;
+    font-weight: bold;
+}
+
+.documents-container .my-documents-container .create-new-document button {
+    padding: 12px 24px;
+    color: white;
+    background-color: #34363A;
+    border: none;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+    
+}
+
+.documents-container .my-documents-container .create-new-document button > span {
+    font-size: 28px;
+    padding-right: 10px;
+    
+}
+
+
+.documents-container .my-documents-container .create-new-document button:hover {
+    transition: 0.3s;
+    opacity: 0.5;
+}
+
+.documents-container .view-documents {
+    padding: 24px;
+    
+}
+
+.documents-container .view-documents .filters-visualization {
+    background-color: white;
+    padding: 18px 24px;
+    margin-bottom: 24px;
+  
+    display: flex;
+}
+
+.documents-container .view-documents .filters-visualization .search-filters {
+    display: flex;
+    align-items: center;
+   
+}
+
+.documents-container .view-documents .filters-visualization .search-filters .select-status,
+.documents-container .view-documents .filters-visualization .search-filters .input-date {
+    position: relative;
+   
+    display: flex;
+}
+
+.documents-container .view-documents .filters-visualization .search-filters .select-status label, 
+.documents-container .view-documents .filters-visualization .search-filters .input-date label {
+    position: absolute;
+    top: -1ex;
+    z-index: 1;
+    left: 2em;
+    background-color: white;
+    padding: 0 5px;
+    font-size: 14px;
+    
+}
+
+.documents-container .view-documents .filters-visualization .search-filters .select-status label > span,
+.documents-container .view-documents .filters-visualization .search-filters .input-date label > span {
+    color: red;
+}
+
+.documents-container .view-documents .filters-visualization .search-filters .select-status select {
+    padding: 16px 24px;
+    margin-right: 34px;
+}
+
+.documents-container .view-documents .filters-visualization .search-filters .input-date input {
+    padding: 14px 24px;
+}
+
+.documents-container .view-documents .cards-list {
+    padding: 24px;
+    background-color: white;
+    
+}
+
+.documents-container .view-documents .cards-list .title-and-options {
+    display: flex;
+    justify-content: space-between;
+}
+
+.documents-container .view-documents .cards-list .title-and-options span {
+    cursor: pointer;
+    font-size: 18px;
+    color: black;
+}
+.documents-list .create-document {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #FFF;
+    margin: 0 16px;
+    padding: 16px;
+    border-radius: 4px;
+}
+
+.documents-list .create-document h1 {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.documents-list .create-document button {
+    padding: 8px 24px;
+    border-radius: 4px;
+    border: none;
+    color: #FFF;
+    background-color: #34363A;
+}
+
+.documents-list .contracts-list .contract-card {
+   
+    width: 292px;
+    height: 227px;
+}
+@media(max-width: 700px){
+    .documents-container .my-documents-container .create-new-document button{
+        width: 150px;
+        height: 80px;
+        padding: 10px ;
+        justify-content: center;
+        
+      
+
+    }
+   
+    
+    .documents-container .my-documents-container .create-new-document h1{
+        font-size: 24px;
+        
+        
+    }
+    
+    
+}
+@media(max-width: 560px){
+    .documents-container .view-documents .filters-visualization{
+        display: flex;
+       justify-content: center;
+       align-content: center;
+        padding: 10px ;
+        margin-bottom: 24px;
+        width: 100%;
+        
+    
+    }
+    .documents-container .view-documents .filters-visualization .search-filters{
+        display: flex;
+        flex-direction: column-reverse;
+      
+        gap: 10px;
+         align-items: baseline;
+         width: 90%;
+        
+    
+    }
+}
+

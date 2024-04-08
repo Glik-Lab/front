@@ -1,0 +1,152 @@
+.signup-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.signup-container .background-traxt {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #061523;
+}
+
+.signup-container .signup-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 150px);
+}
+
+.signup-container .signup-form h1 {
+    font-family: 'Monument Extended', sans-serif;
+    font-size: 24px;
+    width: 503px;
+    text-align: center;
+}
+
+.signup-container .signup-form .credit-card-warning {
+    background-color: #EFFBDC;
+    padding: 4px 8px;
+    border-radius: 5px;
+}
+
+.signup-container .signup-form .errorMessage {
+    color: red;
+}
+
+.signup-container .signup-form .name,
+.signup-container .signup-form .email,
+.signup-container .signup-form .password {
+    position: relative;
+}
+
+.signup-container .signup-form .name input,
+.signup-container .signup-form .email input,
+.signup-container .signup-form .password input  {
+    width: 480px;
+    height: 56px;
+    padding: 16px 24px;
+    margin: 15px 0;
+    border: 1px solid #C4C8CE;
+    border-radius: 4px;
+}
+
+.signup-container .signup-form .name label,
+.signup-container .signup-form .email label,
+.signup-container .signup-form .password label {
+    position: absolute;
+    top: 1ex;
+    z-index: 1;
+    left: 2em;
+    background-color: white;
+    padding: 0 5px;
+    font-size: 14px;
+}
+
+.signup-container .signup-form .name label span,
+.signup-container .signup-form .email label span,
+.signup-container .signup-form .password label span {
+    color: red;
+}
+
+.signup-container .signup-form .password .toggle-password {
+    position: absolute;
+    background-color: white;
+    border: none;
+    top: 18px;
+    right: 15px;
+    font-size: 30px;
+}
+
+.signup-container .signup-form .checkbox {
+    width: 480px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    border: 1px solid red;
+}
+
+.signup-container .signup-form .password {
+    position: relative;
+}
+
+.signup-container .signup-form .password .button-icon {
+    position: absolute;
+    background-color: white;
+    border: none;
+    top: 24px;
+    right: 3px;
+    width: 50px;
+    height: 45%;
+    font-size: 24px;
+}
+
+.signup-container .signup-form .button-signup {
+    width: 480px;
+    padding: 8px 24px;
+    margin-bottom: 25px;
+    background-color: #34363A;
+    color: white;
+    border-radius: 4px;
+}
+
+.signup-container .signup-form .button-signup:hover {   
+    background-color: #E3E5E8;
+    color: #AAACB2;
+    transition: 0.3s;
+}
+
+.signup-container .signup-form .back {
+    text-align: center;
+}
+
+.signup-container .signup-form .back a {
+    color: #202020;
+    font-weight: bold;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.signup-container .signup-form .back a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 1170px) {
+    .signup-container .background-traxt {
+        display: none;
+    }
+
+    .signup-container .signup-form {
+        width: 100vw;
+        height: 80vh;
+    }
+
+    .signup-container .signup-form .name input,
+    .signup-container .signup-form .email input,
+    .signup-container .signup-form .password input,
+    .signup-container .signup-form .checkbox,
+    .signup-container .signup-form .button-signup {
+        width: 400px;
+    }
+}

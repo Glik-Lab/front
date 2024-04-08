@@ -1,0 +1,160 @@
+.container {
+	width: 100%;
+	margin: auto;
+	padding: 0 2rem;
+}
+
+.main {
+	min-height: 100vh;
+	width: 100%;
+	padding: 4rem 0;
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.title {
+	line-height: 1.15;
+	font-size: 3rem;
+	text-align: center;
+	margin: 50px;
+}
+
+.title a {
+	color: #0070f3;
+	text-decoration: none;
+}
+
+
+
+.card {
+	margin: 0.5rem;
+	padding: 0.7rem;
+	text-align: center;
+	color: #0070f3;
+	background-color: #fafafa;
+	text-decoration: none;
+	border: 1px solid #0070f3;
+	border-radius: 10px;
+	transition: color 0.15s ease, border-color 0.15s ease;
+	width: 100%;
+    
+}
+
+.card1{
+	margin: 0.5rem;
+	padding: 0.7rem;
+	text-align: center;
+	color: #002FA7;
+	background-color: #fafafa;
+	text-decoration: none;
+	border: 1px solid #002FA7;
+	border-radius: 10px;
+	transition: color 0.15s ease, border-color 0.15s ease;
+	width: 50%;
+}
+
+.card:hover,
+.card:focus,
+.card:active {
+	cursor: pointer;
+	background-color: #f1f1f1;
+}
+
+.footer {
+	display: flex;
+	flex: 1;
+	padding: 2rem 0;
+	border-top: 1px solid #eaeaea;
+	justify-content: center;
+	align-items: center;
+	margin-top: 10rem;
+}
+
+.footer a {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-grow: 1;
+}
+
+.logo {
+	height: 1.5rem;
+	margin-left: 0.5rem;
+}
+
+@media (max-width: 1200px) {
+	.container {
+		width: 100%;
+	}
+}
+
+.flex-container {
+	display: flex;
+	flex-flow: row wrap;
+}
+
+.flex-container > div {
+	width: 100px;
+	margin: 10px;
+	text-align: center;
+	line-height: 75px;
+	font-size: 30px;
+}
+
+#console {
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	word-wrap: break-word;
+	font-size: 16px;
+	font-family: monospace;
+}
+
+.login-container {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.background-glick {
+   align-items: center;
+	 justify-content: center;
+	 width: 100%;
+	 height: 650px;
+   display: flex;
+	 background-color: #E5F5FF
+	 
+}
+
+.background-glick1 {
+	 width: 60%;
+	 height:60%;
+	 display: flex;
+	 align-items: center;
+	 justify-content: center;
+}
+
+.div-login{
+	display: flex;
+	width: 100%;
+	height: 100%;
+	justify-content: center;
+}
+
+.login-titulo{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 90%;
+}
+
+.grid1 {
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin: 10px;
+    width: 90%;
+}

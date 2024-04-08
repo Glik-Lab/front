@@ -1,0 +1,76 @@
+.divMain{
+  display: flex; 
+  flex-direction: column;
+  justify-content: flex-start; 
+ 
+ }
+ .left h1 {
+  display: flex;
+  flex-direction: column;
+  background-image: linear-gradient(rgba(0, 255, 255, 0.2), rgba(0, 255, 255, 0.2)), url('../assets/back.jpeg');
+  background-size: cover, cover;
+  background-position: center center, center center;
+  background-repeat: no-repeat, no-repeat;
+  height: 550px;
+  font-size: 100px;
+  font-weight: bold;
+ }
+ 
+
+ .left1 {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(169,219,255, 0.5); 
+  height: 750px;
+  
+ }
+
+ .left2 {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(255, 255, 255); 
+ 
+  
+ }
+ 
+
+.advantages {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 100px 50px;
+  background-color: white;
+}
+
+.leftAdvantages {
+  width: 450px;
+  margin: 0 auto;
+}
+
+.leftAdvantages h1 {
+  font-size: 100px;
+  font-weight: bold;
+  color: #061923;
+}
+
+.leftAdvantages h2 {
+  color: #7f7f7f;
+}
+
+.rightAdvantages {
+  margin: 0 auto;
+}
+
+.rightAdvantages h4 {
+  color: #061923;
+  font-weight: bold;
+}
+
+.containerAdvantages {
+  display: flex;
+  align-items: center;
+  width: 500px;
+}
+
+.informationsAdvantages {
+  margin: 30px 0 0 20px;
+}
