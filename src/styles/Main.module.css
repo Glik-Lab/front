@@ -7,30 +7,35 @@
  .left h1 {
   display: flex;
   flex-direction: column;
-  background-image: linear-gradient(rgba(0, 255, 255, 0.2), rgba(0, 255, 255, 0.2)), url('../assets/back.jpeg');
-  background-size: cover, cover;
-  background-position: center center, center center;
-  background-repeat: no-repeat, no-repeat;
-  height: 550px;
+  background-image: linear-gradient(rgba(120, 250, 250, 0.2), rgba(198, 249, 249, 0.2));
   font-size: 100px;
   font-weight: bold;
+  position: absolute;
+  width: 100%;
+  height: 550px;
+  z-index: 1;
  }
+ .containerRightDemonstration {
  
+  width: 54%;
+  height: 300px;
+  
+  margin-left: 500px;
+  
+}
+
+.rightDemonstration {
+  width: 100px;
+  height: 100px;
+
+}
 
  .left1 {
   display: flex;
   flex-direction: column;
-  background-color: rgba(169,219,255, 0.5); 
-  height: 750px;
-  
- }
-
- .left2 {
-  display: flex;
-  flex-direction: column;
   background-color: rgb(255, 255, 255); 
- 
-  
+  margin-top: 23%;
+
  }
  
 
@@ -39,17 +44,20 @@
   grid-template-columns: 1fr 1fr;
   padding: 100px 50px;
   background-color: white;
+
 }
 
 .leftAdvantages {
   width: 450px;
   margin: 0 auto;
+ 
 }
 
 .leftAdvantages h1 {
   font-size: 100px;
   font-weight: bold;
   color: #061923;
+ 
 }
 
 .leftAdvantages h2 {
@@ -74,3 +82,4 @@
 .informationsAdvantages {
   margin: 30px 0 0 20px;
 }
+

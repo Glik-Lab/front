@@ -20,11 +20,16 @@ const Navbar: React.FC<NavBarLogadoProps> = ({ onLogout }) => {
  const { t } = useTranslation();
 
  useEffect(() => {
-    const name = localStorage.getItem('userName');
-    if (name) {
-      setUserName(name);
-    }
- }, []);
+  const name1 = localStorage.getItem('openlogin_store');
+  if (name1) {
+    // Extrai apenas os números da string
+    const numbersOnly = name1.replace(/[^0-9]/g, '');
+    // Trunca a string para mostrar apenas os 5 primeiros caracteres com "..." no final
+    const name = numbersOnly.slice(0, 5) + "...";
+    setUserName(name);
+  }
+}, []);
+
 console.log(userName)
  function closeMenu() {
     setOpenMenu(false);
@@ -33,6 +38,7 @@ console.log(userName)
  function handleLogout() {
 
     localStorage.removeItem('userName');
+    localStorage.removeItem('openlogin_store')
     window.location.href = '/login';
  }
 

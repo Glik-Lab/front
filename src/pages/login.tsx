@@ -6,8 +6,8 @@ import { useEffect, useState } from "react";
 import { v4 as uuidv4 } from 'uuid';
 import ImageGlick from '../assets/logo-glick/Glik 2.svg';
 import NavbarLogado from '../components/NavBarLogado';
+import RPC from "../components/solanaRPC";
 import styles from '../styles/Card.module.css';
-import RPC from "./solanaRPC";
 // Adapters
 import { getDefaultExternalAdapters } from "@web3auth/default-solana-adapter"; // All default Solana Adapters
 import { SolanaPrivateKeyProvider } from "@web3auth/solana-provider";
@@ -92,59 +92,55 @@ export default function Signin() {
 
   useEffect(() => {
     const init = async () => {
-      try {
-
-        const solanaPrivateKeyPrvoider = new SolanaPrivateKeyProvider({
-          config: { chainConfig: chainConfig }
-        })
-
-        const web3auth = new Web3Auth({
-          clientId,
-          // uiConfig refers to the whitelabeling options, which is available only on Growth Plan and above
-          // Please remove this parameter if you're on the Base Plan
-          uiConfig: {
-            appName: "Glick Lab",
-            mode: "light",
-            // loginMethodsOrder: ["apple", "google", "twitter"],
-            logoLight: "https://imgur.com/Z335kCQ",
-            logoDark: "https://web3auth.io/images/web3authlogodark.png",
-            defaultLanguage: "pt", // en, de, ja, ko, zh, es, fr, pt, nl
-            loginGridCol: 3,
-            primaryButton: "externalLogin", // "externalLogin" | "socialLogin" | "emailLogin"
-            uxMode: "redirect",
-          },
-          web3AuthNetwork: WEB3AUTH_NETWORK.SAPPHIRE_DEVNET,
-          privateKeyProvider: solanaPrivateKeyPrvoider
-        });
-
-
-        // Setup external adapaters
-        const adapters = await getDefaultExternalAdapters({
-          options: {
-            clientId,
-            chainConfig,
-          }
-        });
-        adapters.forEach((adapter) => {
-          web3auth.configureAdapter(adapter);
-        });
-
-        setWeb3auth(web3auth);
-
-        await web3auth.initModal();
-        setProvider(web3auth.provider);
-
-        if (web3auth.connected) {
-          setLoggedIn(true);
-         
-        }
-      } catch (error) {
-        console.error(error);
-      }
+       if (typeof window !== 'undefined') { // Verifica se o código está sendo executado no lado do cliente
+         try {
+           const solanaPrivateKeyPrvoider = new SolanaPrivateKeyProvider({
+             config: { chainConfig: chainConfig }
+           });
+   
+           const web3auth = new Web3Auth({
+             clientId,
+             uiConfig: {
+               appName: "Glick Lab",
+               mode: "light",
+               logoLight: "https://imgur.com/Z335kCQ",
+               logoDark: "https://web3auth.io/images/web3authlogodark.png",
+               defaultLanguage: "pt",
+               loginGridCol: 3,
+               primaryButton: "externalLogin",
+               uxMode: "redirect",
+             },
+             web3AuthNetwork: WEB3AUTH_NETWORK.SAPPHIRE_DEVNET,
+             privateKeyProvider: solanaPrivateKeyPrvoider
+           });
+   
+           const adapters = await getDefaultExternalAdapters({
+             options: {
+               clientId,
+               chainConfig,
+             }
+           });
+           adapters.forEach((adapter) => {
+             web3auth.configureAdapter(adapter);
+           });
+   
+           setWeb3auth(web3auth);
+   
+           await web3auth.initModal();
+           setProvider(web3auth.provider);
+   
+           if (web3auth.connected) {
+             setLoggedIn(true);
+           }
+         } catch (error) {
+           console.error(error);
+         }
+       }
     };
-
+   
     init();
-  }, []);
+   }, []); // Certifique-se de que as dependências estão corretas aqui
+   
 
   const login = async () => {
     if (!web3auth) {

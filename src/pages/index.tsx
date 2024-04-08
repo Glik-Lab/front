@@ -4,6 +4,7 @@
 import Image from 'next/image'
 import { useTranslation } from 'react-i18next'
 import Apps from '../assets/apps.svg'
+import Back from '../assets/back.jpeg'
 import NewReleases from '../assets/new_releases.svg'
 import Security from '../assets/security.svg'
 import Footer from '../components/Footer'
@@ -24,8 +25,13 @@ const Home = () => {
      <Navbar />
   <div className={styles.divMain}>
     <div className={styles.left}>
+    
    <h1>Glik Lab </h1>
+   <div className={styles.containerRightDemonstration}>
+   <Image  clasName={styles.rightDemonstration}src={Back} alt="Apps" />
    </div>
+   </div>
+   
    <div className={styles.left1}>
    <div className={styles.advantages} id="plataforma">
           <div className={styles.leftAdvantages}>
@@ -57,7 +63,6 @@ const Home = () => {
           </div>
         </div>
    </div>
-   <div className={styles.left2}></div>
   </div>
    <Footer />
     </>
